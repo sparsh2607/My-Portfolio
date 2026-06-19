@@ -190,13 +190,10 @@ img { display: block; max-width: 100%; }
  
 .hero{
     position:relative;
-    /* width:100vw;
-    height:100vh; */
+    width:100vw;
+    height:100vh; 
     overflow:hidden;
     background:#0f0f0f;
-
-    width:100%;
-    min-height:100vh;
 }
 
 .hero__bg{
@@ -204,22 +201,15 @@ img { display: block; max-width: 100%; }
     inset:0;
     display:flex;
     justify-content:center;
-    /* align-items:flex-end;
-    transform:translateY(3%); */
-    align-items:center;
-    transform:none;
+    align-items:flex-end;
+    transform:translateY(3%); 
 }
 
 .hero__img{
-    /* height:100vh;
+    height:100vh;
     width:auto;
     max-width:none;
-    object-fit:contain; */
-    width:min(55vw, 850px);
-    height:auto;
-    max-height:90vh;
-    object-fit:contain;
-
+    object-fit:contain; 
 }
  
 /* The giant PORTFOLIO text layer */
@@ -235,8 +225,7 @@ img { display: block; max-width: 100%; }
  
 .hero__word {
   font-family: var(--font-display);
-  /* font-size: clamp(80px, 14vw, 210px); */
-  font-size: clamp(120px,18vw,320px);
+  font-size: clamp(80px, 14vw, 210px); 
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.01em;
@@ -970,7 +959,7 @@ img { display: block; max-width: 100%; }
    RESPONSIVE
    ============================================= */
  
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .nav__links { display: none; }
   .nav__burger { display: flex; }
  
@@ -997,16 +986,6 @@ img { display: block; max-width: 100%; }
   .project-card__info { padding: 20px; }
 }
  
-/* changes */
-@media (min-width:901px){
-    .nav__links{
-        display:flex !important;
-    }
-
-    .nav__burger{
-        display:none !important;
-    }
-}
 /* =============================================
    REDUCED MOTION
    ============================================= */
