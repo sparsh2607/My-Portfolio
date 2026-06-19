@@ -959,7 +959,7 @@ img { display: block; max-width: 100%; }
    RESPONSIVE
    ============================================= */
  
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .nav__links { display: none; }
   .nav__burger { display: flex; }
  
