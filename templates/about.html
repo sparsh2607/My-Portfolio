@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block title %}About — Sparsh Gahoi{% endblock %}
+ 
+{% block content %}
+ 
+<section class="page-hero">
+    <div class="page-hero__inner">
+        <p class="page-hero__eyebrow">Machine Learning Enthusiast • AI Explorer • Problem Solver</p>
+        <h1 class="page-hero__title">Building<br>Intelligent<br>Systems.</h1>
+        <p class="page-hero__description">I'm<span> Sparsh Gahoi</span>, a Computer Science student specializing in <span>Machine Learning</span> and <span>Artificial Intelligence</span>. I build intelligent systems that transform data into actionable insights and solve real-world problems through practical AI solutions..</p>
+    </div>
+    <div class="about__stats">
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Projects Built</p>
+        </div>
+
+        <div class="stat">
+            <h3>6+</h3>
+            <p>technologies</p>
+        </div>
+
+        <div class="stat">
+            <h3>3rd</h3>
+            <p>college year</p>
+        </div>
+        <div class="stat">
+            <h3>1+</h3>
+            <p>years of experience</p>
+        </div>
+    </div>
+</div>
+<div class="tech-stack">
+    <h3>Tech Stack</h3>
+
+    <div class="tech-grid">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>Django</span>
+        <span>SQL</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Scikit-Learn</span>
+        <span>TensorFlow</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>HTML/CSS</span>
+    </div>
+</div>
+</section>
+ 
+<section class="about-body">
+    <div class="about-body__inner">
+        {% comment %} <div class="about-body__portrait">
+            <img src="{% static 'images/hero.png' %}" alt="Sparsh Gahoi" class="about-body__img">
+        </div> {% endcomment %}
+        {% comment %} <div class="about-body__text">
+            <h2 class="about-body__name">Sparsh Gahoi</h2>
+            <p class="about-body__bio">
+                I'm a designer and developer with a passion for building bold, intentional digital experiences.
+                I bridge the gap between visual craft and technical execution — turning ideas into things
+                people actually enjoy using.
+            </p>
+            <p class="about-body__bio">
+                Currently based in India, I work with brands and startups to create identities,
+                websites, and products that feel distinct and alive.
+            </p> {% endcomment %}
+ 
+            {% comment %} <div class="about-body__skills">
+                <h3 class="about-body__skills-title">Skills</h3>
+                {% for skill in skills %}
+                <div class="skill-bar">
+                    <div class="skill-bar__label">
+                        <span>{{ skill.name }}</span>
+                        <span>{{ skill.level }}%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" style="--level: {{ skill.level }}%"></div>
+                    </div>
+                </div>
+                {% endfor %} {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+        </div>
+    </div>
+</section>
+ 
+{% endblock %}

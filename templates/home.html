@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block title %}Sparsh Gahoi — Portfolio{% endblock %}
+ 
+{% block content %}
+ 
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero__bg">
+        <img src="{% static 'images/hero.png' %}" alt="Sparsh Gahoi" class="hero__img">
+    </div>
+ 
+    <!-- Big PORTFOLIO text — split so person appears in front of TF -->
+    <div class="hero__text" aria-hidden="true">
+        <span class="hero__word hero__word--solid">POR</span>
+        <span class="hero__word hero__word--outline">T</span>
+        <span class="hero__word hero__word--outline hero__word--f">F</span>
+        <span class="hero__word hero__word--solid">OLIO</span>
+    </div>
+ 
+    <!-- Scroll cue -->
+    {% comment %} <div class="hero__scroll">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">SCROLL</span>
+    </div> {% endcomment %}
+</section>
+ 
+<!-- INTRO STRIP -->
+<section class="intro">
+    <div class="intro__inner">
+        <p class="intro__tag">AI • ML • DATA SCIENCE</p>
+        <h2 class="intro__headline">Aspiring Machine Learning Engineer<br>Creating data-driven and AI-powered solutions</h2>
+        <a href="{% url 'about' %}" class="intro__cta">About me →</a>
+    </div>
+</section>
+ 
+<!-- WORK SECTION -->
+{% comment %} <section class="work" id="work">
+    <div class="work__header">
+        <p class="work__eyebrow">SELECTED WORK</p>
+        <h2 class="work__title">Projects</h2>
+    </div>
+ 
+    <div class="work__grid">
+        {% for project in projects %}
+        <article class="project-card">
+            <div class="project-card__placeholder">
+                <span class="project-card__num">0{{ forloop.counter }}</span>
+            </div>
+            <div class="project-card__info">
+                <div class="project-card__meta">
+                    <span class="project-card__category">{{ project.category }}</span>
+                    <span class="project-card__year">{{ project.year }}</span>
+                </div>
+                <h3 class="project-card__title">{{ project.title }}</h3>
+                <p class="project-card__desc">{{ project.description }}</p>
+                <div class="project-card__tags">
+                    {% for tag in project.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section> {% endcomment %}
+ 
+<!-- CTA BANNER -->
+<section class="cta-banner">
+    <div class="cta-banner__inner">
+        <h2 class="cta-banner__text">Let's build something<br><em>together.</em></h2>
+        <a href="{% url 'contact' %}" class="btn btn--light">Get in touch</a>
+    </div>
+</section>
+ 
+{% endblock %}

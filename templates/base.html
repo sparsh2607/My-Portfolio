@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sparsh Gahoi — Portfolio{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+ 
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav__brand">
+            <img src="{% static 'images/sg-logo.png' %}" alt="SG Logo" class="nav__logo">
+            <span class="nav__name">SPARSH GAHOI</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="{% url 'home' %}" class="nav__link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">HOME</a></li>
+            <li><a href="{% url 'about' %}" class="nav__link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">ABOUT</a></li>
+            <li><a href="{% url 'contact' %}" class="nav__link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">CONTACT</a></li>
+        </ul>
+        <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+ 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+        </ul>
+    </div>
+ 
+    {% block content %}{% endblock %}
+ 
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__copy">Built by Sparsh Gahoi</p>
+            <div class="footer__socials">
+                <a href="https://github.com/sparsh2607" class="footer__social">GITHUB</a>
+                <a href="https://sparshgahoi@gmail.com" class="footer__social">EMAIL</a>
+                <a href="https://www.linkedin.com/in/sparsh-gahoi-05a212342/" class="footer__social">LINKEDIN</a>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
